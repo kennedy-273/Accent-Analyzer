@@ -1,15 +1,16 @@
 # English Accent Analyzer
 
-A tool for analyzing English accents from video interviews, built for REM Waste's hiring process.
+Analyze English accents from video interviews with ease.
 
 ## Features
 
-- Accepts video URLs (direct MP4 links) or file uploads
-- Extracts audio from videos
-- Transcribes speech to text
-- Analyzes and classifies English accents
-- Provides confidence scores for English proficiency
-- Displays accent characteristics and explanations
+- Accepts direct MP4 video URLs or file uploads
+- Extracts audio from video files
+- Transcribes speech to text using Google's Speech Recognition API
+- Detects and classifies English accents (American, British, Australian, Indian, Canadian)
+- Provides confidence scores for accent detection
+- Displays accent characteristics, explanations, and vocabulary markers
+- Interactive and user-friendly Streamlit interface
 
 ## Supported Accents
 
@@ -21,76 +22,76 @@ A tool for analyzing English accents from video interviews, built for REM Waste'
 
 ## Installation
 
-1. Clone this repository:
-```
-git clone https://github.com/your-username/english-accent-analyzer.git
-cd english-accent-analyzer
-```
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/kennedy-273/Accent-Analyzer.git
+    cd Accent-Analyzer
+    ```
 
-2. Create a virtual environment and activate it:
-```
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-```
+2. **Create and activate a virtual environment:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  
+    ```
 
-3. Install the required packages:
-```
-pip install -r requirements.txt
-```
+3. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-1. Run the Streamlit app:
-```
-streamlit run app.py
-```
+1. **Start the Streamlit app:**
+    ```bash
+    streamlit run app.py
+    ```
 
-2. Open the app in your browser (default: http://localhost:8501)
+2. **Open your browser:**  
+   Visit [http://localhost:8501](http://localhost:8501) (or the URL shown in your terminal).
 
-3. Enter a video URL (MP4 link), upload a video file, or use the demo data
-
-4. Click "Analyze Accent" to process the video and see results
+3. **Analyze an accent:**
+   - Enter a direct MP4 video URL, upload a video file, or use demo data.
+   - Click **"Analyze Accent"** to process the video and view results.
 
 ## Demo
 
-For quick testing, check out the live demo at:
-[https://accent-analyzer-demo.streamlit.app/](https://accent-analyzer-demo.streamlit.app/)
+Try the live demo:  
+[https://accent-analyzer-j6grkhdz4igjatn4qu9tj8.streamlit.app/](https://accent-analyzer-j6grkhdz4igjatn4qu9tj8.streamlit.app/)
 
-## Technical Details
+**Tip:**  
+To test with your own video, pick a short video from YouTube, then go to [ytmp3.cc](https://ytmp3.cc/5Hcs/) and convert it to MP4. Use the resulting MP4 link or file in the app.
 
-- Speech recognition powered by Google's Speech Recognition API
-- Accent analysis based on linguistic patterns and markers
-- Built with Python and Streamlit for easy deployment
-- Processes include:
-  - Video download and audio extraction
-  - Speech-to-text transcription
-  - Natural language processing for accent detection
-  - Confidence scoring algorithm
+## How It Works
+
+- **Video Input:** Accepts direct MP4 links or file uploads.
+- **Audio Extraction:** Extracts audio from the video using MoviePy.
+- **Speech Recognition:** Converts audio to text via Google's Speech Recognition API.
+- **Accent Analysis:** Uses linguistic markers, vocabulary, and phrases to classify the accent.
+- **Results:** Displays detected accent, confidence score, and characteristic details.
 
 ## Deployment
 
-The app can be easily deployed to Streamlit Cloud:
+Deploy easily to Streamlit Cloud:
 
-1. Push your code to GitHub
-2. Sign in to [Streamlit Cloud](https://streamlit.io/cloud)
-3. Create a new app pointing to your repository
-4. Configure the app to run `app.py`
+1. Push your code to GitHub.
+2. Sign in to [Streamlit Cloud](https://streamlit.io/cloud).
+3. Create a new app and point it to your repository.
+4. Set the entry point to `app.py`.
 
 ## Limitations
 
-This demo version has some limitations:
-- Only supports direct MP4 URLs for video inputs
-- Performance depends on audio quality and clarity
-- Limited number of English accents detected
-- Demo mode shows pre-configured results for testing
+- Only supports direct MP4 URLs for video input.
+- Accuracy depends on audio quality and clarity.
+- Detects a limited set of English accents.
+- Demo mode provides simulated results for testing.
 
 ## Future Improvements
 
-- Support for more video sources (YouTube, Vimeo, etc.)
-- Integration with sophisticated ML accent classification models
-- More detailed accent analysis with regional specificity
-- Real-time analysis for live interviews
-- Custom vocabulary and phrase detection
+- Support for more video sources (e.g., YouTube, Vimeo)
+- Integration with advanced ML-based accent classification
+- More granular regional accent detection
+- Real-time/live interview analysis
+- Customizable vocabulary and phrase detection
 
 ## License
 
