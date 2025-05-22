@@ -90,7 +90,6 @@ Deploy easily to Streamlit Cloud:
 - Support for more video sources (e.g., YouTube, Vimeo)
 - Integration with advanced ML-based accent classification
 - More granular regional accent detection
-- Real-time/live interview analysis
 - Customizable vocabulary and phrase detection
 
 ## License
